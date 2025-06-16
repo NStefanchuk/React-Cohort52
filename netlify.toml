@@ -1,0 +1,4 @@
+[build]
+base = "week1/project/ecommerce"
+publish = "dist"
+command = "npm run build"
