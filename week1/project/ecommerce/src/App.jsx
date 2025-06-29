@@ -12,10 +12,7 @@ function App() {
         selectedCategory={selectedCategory}
         setSelectedCategory={setSelectedCategory}
       />
-      <ProductList
-        selectedCategory={selectedCategory}
-        setSelectedCategory={setSelectedCategory}
-      />
+      <ProductList selectedCategory={selectedCategory} />
     </>
   )
 }

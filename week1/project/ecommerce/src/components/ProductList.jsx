@@ -1,9 +1,7 @@
-import React from 'react'
 import products from '../fake-data/all-products'
 import ProductCard from './ProductCard'
 
-const ProductList = ({ selectedCategory, setSelectedCategory }) => {
-  console.log(selectedCategory)
+const ProductList = ({ selectedCategory }) => {
   return (
     <div>
       <ul className="products">
@@ -14,7 +12,9 @@ const ProductList = ({ selectedCategory, setSelectedCategory }) => {
               !selectedCategory
           )
           .map((item) => (
-            <ProductCard item={item} />
+            <li key={item.id} className="products-item">
+              <ProductCard item={item} />
+            </li>
           ))}
       </ul>
     </div>
