@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 
 const CategoryList = ({ selectedCategory, setSelectedCategory, setProducts }) => {
   const [categories, setCategories] = useState([])
@@ -43,9 +43,7 @@ const CategoryList = ({ selectedCategory, setSelectedCategory, setProducts }) =>
         <button
           key={item}
           onClick={() => getProductsByCategorie(item)}
-          className={`${
-            selectedCategory === item ? 'category-item active' : 'category-item'
-          }`}
+          className={`category-item ${selectedCategory === item ? 'active' : ''}`}
         >
           {item}
         </button>
